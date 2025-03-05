@@ -1,36 +1,69 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# AI-Powered Search Dashboard (Frontend)
 
-## Getting Started
+This is the **frontend** of the AI-powered search and aggregation tool. It allows users to search for queries and retrieve results from various sources like Google, YouTube, processed using GEMINI.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- User-friendly Search Interface
+- Real-time API Integration
+- Results from Google, YouTube
+- AI-processed search results
+- Responsive UI with modern styling
+
+## Tech Stack
+
+- **Frontend**: Next.js (React Framework)
+- **Styling**: Tailwind CSS
+- **API Requests**: Axios
+
+## Prerequisites
+
+Ensure you have the following installed:
+
+- Node.js (v16+ recommended)
+- An API-ready backend (Check the backend README)
+
+## Installation
+
+### 1. Clone the repository
+
+```sh
+git clone https://github.com/krush30/Ai-search-tool-Frontend.git
+cd frontend
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Install dependencies
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+```sh
+npm install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 3. Configure Environment Variables
 
-## Learn More
+Create a `.env.local` file in the root directory and add:
 
-To learn more about Next.js, take a look at the following resources:
+```env
+NEXT_PUBLIC_PORT=5000
+NEXT_PUBLIC_BACKEND_URL=http://localhost:5000
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 4. Start the Development Server
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```sh
+npm run dev
+```
 
-## Deploy on Vercel
+The app will run at `http://localhost:3000`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Project Structure
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
+frontend/
+│── components/
+│   ├── Header.js         # App Header
+│   ├── Footer.js         # App Footer
+│── search/
+│   ├── page.js
+│── .env.local           # Environment Variables
+│── package.json         # Dependencies
+```
