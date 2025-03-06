@@ -17,7 +17,7 @@ export default function Dashboard() {
         setError(null);
 
         try {
-            const response = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/search?query=${query}`);
+            const res = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/search?query=${query}`);
             setResults(res.data.results || []);
         } catch (err) {
             console.error("Search Error:", err);
